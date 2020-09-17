@@ -3,11 +3,18 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D170581C25135376009C9714 /* Account&SignOutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D170581B25135376009C9714 /* Account&SignOutView.swift */; };
+		D170581C25135376009C9714 /* AccountSignOutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D170581B25135376009C9714 /* AccountSignOutView.swift */; };
+		D170581F25137A55009C9714 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = D170581E25137A55009C9714 /* Main.swift */; };
+		D17D1A82251383EA000A9BE5 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17D1A81251383EA000A9BE5 /* MainView.swift */; };
+		D17D1A8725138AEE000A9BE5 /* businessStrategy.json in Resources */ = {isa = PBXBuildFile; fileRef = D17D1A8625138AEE000A9BE5 /* businessStrategy.json */; };
+		D17D1A8B25138D9F000A9BE5 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = D17D1A8A25138D9F000A9BE5 /* Lottie */; };
+		D17D1A8E25138DB1000A9BE5 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17D1A8D25138DB1000A9BE5 /* LottieView.swift */; };
+		D17D1A9125139217000A9BE5 /* businessTeam.json in Resources */ = {isa = PBXBuildFile; fileRef = D17D1A9025139217000A9BE5 /* businessTeam.json */; };
+		D17D1A942513934F000A9BE5 /* socialMedia.json in Resources */ = {isa = PBXBuildFile; fileRef = D17D1A932513934F000A9BE5 /* socialMedia.json */; };
 		D1FDFD012513397000342C2F /* SwimmingCoachApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FDFD002513397000342C2F /* SwimmingCoachApp.swift */; };
 		D1FDFD032513397000342C2F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FDFD022513397000342C2F /* ContentView.swift */; };
 		D1FDFD052513397000342C2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1FDFD042513397000342C2F /* Assets.xcassets */; };
@@ -15,7 +22,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D170581B25135376009C9714 /* Account&SignOutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Account&SignOutView.swift"; sourceTree = "<group>"; };
+		D170581B25135376009C9714 /* AccountSignOutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSignOutView.swift; sourceTree = "<group>"; };
+		D170581E25137A55009C9714 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
+		D17D1A81251383EA000A9BE5 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		D17D1A8625138AEE000A9BE5 /* businessStrategy.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = businessStrategy.json; sourceTree = "<group>"; };
+		D17D1A8D25138DB1000A9BE5 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
+		D17D1A9025139217000A9BE5 /* businessTeam.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = businessTeam.json; sourceTree = "<group>"; };
+		D17D1A932513934F000A9BE5 /* socialMedia.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = socialMedia.json; sourceTree = "<group>"; };
 		D1FDFCFD2513397000342C2F /* SwimmingCoach.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwimmingCoach.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1FDFD002513397000342C2F /* SwimmingCoachApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwimmingCoachApp.swift; sourceTree = "<group>"; };
 		D1FDFD022513397000342C2F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -29,12 +42,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D17D1A8B25138D9F000A9BE5 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D17D1A8525138AEE000A9BE5 /* Lottie */ = {
+			isa = PBXGroup;
+			children = (
+				D17D1A9025139217000A9BE5 /* businessTeam.json */,
+				D17D1A8625138AEE000A9BE5 /* businessStrategy.json */,
+				D17D1A932513934F000A9BE5 /* socialMedia.json */,
+			);
+			path = Lottie;
+			sourceTree = "<group>";
+		};
 		D1FDFCF42513397000342C2F = {
 			isa = PBXGroup;
 			children = (
@@ -56,8 +80,12 @@
 			children = (
 				D1FDFD002513397000342C2F /* SwimmingCoachApp.swift */,
 				D1FDFD022513397000342C2F /* ContentView.swift */,
-				D170581B25135376009C9714 /* Account&SignOutView.swift */,
+				D170581E25137A55009C9714 /* Main.swift */,
+				D17D1A81251383EA000A9BE5 /* MainView.swift */,
+				D170581B25135376009C9714 /* AccountSignOutView.swift */,
+				D17D1A8D25138DB1000A9BE5 /* LottieView.swift */,
 				D1FDFD042513397000342C2F /* Assets.xcassets */,
+				D17D1A8525138AEE000A9BE5 /* Lottie */,
 				D1FDFD092513397000342C2F /* Info.plist */,
 				D1FDFD062513397000342C2F /* Preview Content */,
 			);
@@ -88,6 +116,9 @@
 			dependencies = (
 			);
 			name = SwimmingCoach;
+			packageProductDependencies = (
+				D17D1A8A25138D9F000A9BE5 /* Lottie */,
+			);
 			productName = SwimmingCoach;
 			productReference = D1FDFCFD2513397000342C2F /* SwimmingCoach.app */;
 			productType = "com.apple.product-type.application";
@@ -115,6 +146,9 @@
 				Base,
 			);
 			mainGroup = D1FDFCF42513397000342C2F;
+			packageReferences = (
+				D17D1A8925138D9F000A9BE5 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
 			productRefGroup = D1FDFCFE2513397000342C2F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -129,8 +163,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D17D1A9125139217000A9BE5 /* businessTeam.json in Resources */,
+				D17D1A942513934F000A9BE5 /* socialMedia.json in Resources */,
 				D1FDFD082513397000342C2F /* Preview Assets.xcassets in Resources */,
 				D1FDFD052513397000342C2F /* Assets.xcassets in Resources */,
+				D17D1A8725138AEE000A9BE5 /* businessStrategy.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,7 +180,10 @@
 			files = (
 				D1FDFD032513397000342C2F /* ContentView.swift in Sources */,
 				D1FDFD012513397000342C2F /* SwimmingCoachApp.swift in Sources */,
-				D170581C25135376009C9714 /* Account&SignOutView.swift in Sources */,
+				D170581F25137A55009C9714 /* Main.swift in Sources */,
+				D17D1A82251383EA000A9BE5 /* MainView.swift in Sources */,
+				D170581C25135376009C9714 /* AccountSignOutView.swift in Sources */,
+				D17D1A8E25138DB1000A9BE5 /* LottieView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,6 +372,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D17D1A8925138D9F000A9BE5 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.8;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D17D1A8A25138D9F000A9BE5 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D17D1A8925138D9F000A9BE5 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D1FDFCF52513397000342C2F /* Project object */;
 }

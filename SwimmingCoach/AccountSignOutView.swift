@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Account_SignOutView: View {
+struct AccountSignOutView: View {
     var body: some View {
         
         VStack {
@@ -52,9 +52,9 @@ struct Account_SignOutView: View {
     }
 }
 
-struct Account_SignOutView_Previews: PreviewProvider {
+struct AccountSignOutView_Previews: PreviewProvider {
     static var previews: some View {
-        Account_SignOutView()
+        AccountSignOutView()
     }
 }
 
