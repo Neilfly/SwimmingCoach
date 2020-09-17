@@ -15,6 +15,12 @@
 		D17D1A8E25138DB1000A9BE5 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17D1A8D25138DB1000A9BE5 /* LottieView.swift */; };
 		D17D1A9125139217000A9BE5 /* businessTeam.json in Resources */ = {isa = PBXBuildFile; fileRef = D17D1A9025139217000A9BE5 /* businessTeam.json */; };
 		D17D1A942513934F000A9BE5 /* socialMedia.json in Resources */ = {isa = PBXBuildFile; fileRef = D17D1A932513934F000A9BE5 /* socialMedia.json */; };
+		D1CA131E2513A15700F4CA14 /* Tabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CA131D2513A15700F4CA14 /* Tabbar.swift */; };
+		D1CA13222513A33100F4CA14 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CA13212513A33100F4CA14 /* BlurView.swift */; };
+		D1CA13252513A59100F4CA14 /* bloodDrop.json in Resources */ = {isa = PBXBuildFile; fileRef = D1CA13242513A59100F4CA14 /* bloodDrop.json */; };
+		D1CA13282513A74700F4CA14 /* blood.json in Resources */ = {isa = PBXBuildFile; fileRef = D1CA13272513A74700F4CA14 /* blood.json */; };
+		D1CA132B2513A7CD00F4CA14 /* medicalPulse.json in Resources */ = {isa = PBXBuildFile; fileRef = D1CA132A2513A7CD00F4CA14 /* medicalPulse.json */; };
+		D1CA132E2513ADDE00F4CA14 /* brain.json in Resources */ = {isa = PBXBuildFile; fileRef = D1CA132D2513ADDD00F4CA14 /* brain.json */; };
 		D1FDFD012513397000342C2F /* SwimmingCoachApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FDFD002513397000342C2F /* SwimmingCoachApp.swift */; };
 		D1FDFD032513397000342C2F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FDFD022513397000342C2F /* ContentView.swift */; };
 		D1FDFD052513397000342C2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1FDFD042513397000342C2F /* Assets.xcassets */; };
@@ -29,6 +35,12 @@
 		D17D1A8D25138DB1000A9BE5 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		D17D1A9025139217000A9BE5 /* businessTeam.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = businessTeam.json; sourceTree = "<group>"; };
 		D17D1A932513934F000A9BE5 /* socialMedia.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = socialMedia.json; sourceTree = "<group>"; };
+		D1CA131D2513A15700F4CA14 /* Tabbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabbar.swift; sourceTree = "<group>"; };
+		D1CA13212513A33100F4CA14 /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
+		D1CA13242513A59100F4CA14 /* bloodDrop.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = bloodDrop.json; sourceTree = "<group>"; };
+		D1CA13272513A74700F4CA14 /* blood.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = blood.json; sourceTree = "<group>"; };
+		D1CA132A2513A7CD00F4CA14 /* medicalPulse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = medicalPulse.json; sourceTree = "<group>"; };
+		D1CA132D2513ADDD00F4CA14 /* brain.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = brain.json; sourceTree = "<group>"; };
 		D1FDFCFD2513397000342C2F /* SwimmingCoach.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwimmingCoach.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1FDFD002513397000342C2F /* SwimmingCoachApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwimmingCoachApp.swift; sourceTree = "<group>"; };
 		D1FDFD022513397000342C2F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -55,6 +67,10 @@
 				D17D1A9025139217000A9BE5 /* businessTeam.json */,
 				D17D1A8625138AEE000A9BE5 /* businessStrategy.json */,
 				D17D1A932513934F000A9BE5 /* socialMedia.json */,
+				D1CA13242513A59100F4CA14 /* bloodDrop.json */,
+				D1CA13272513A74700F4CA14 /* blood.json */,
+				D1CA132A2513A7CD00F4CA14 /* medicalPulse.json */,
+				D1CA132D2513ADDD00F4CA14 /* brain.json */,
 			);
 			path = Lottie;
 			sourceTree = "<group>";
@@ -83,7 +99,9 @@
 				D170581E25137A55009C9714 /* Main.swift */,
 				D17D1A81251383EA000A9BE5 /* MainView.swift */,
 				D170581B25135376009C9714 /* AccountSignOutView.swift */,
+				D1CA131D2513A15700F4CA14 /* Tabbar.swift */,
 				D17D1A8D25138DB1000A9BE5 /* LottieView.swift */,
+				D1CA13212513A33100F4CA14 /* BlurView.swift */,
 				D1FDFD042513397000342C2F /* Assets.xcassets */,
 				D17D1A8525138AEE000A9BE5 /* Lottie */,
 				D1FDFD092513397000342C2F /* Info.plist */,
@@ -164,10 +182,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				D17D1A9125139217000A9BE5 /* businessTeam.json in Resources */,
+				D1CA132B2513A7CD00F4CA14 /* medicalPulse.json in Resources */,
+				D1CA13282513A74700F4CA14 /* blood.json in Resources */,
+				D1CA132E2513ADDE00F4CA14 /* brain.json in Resources */,
 				D17D1A942513934F000A9BE5 /* socialMedia.json in Resources */,
 				D1FDFD082513397000342C2F /* Preview Assets.xcassets in Resources */,
 				D1FDFD052513397000342C2F /* Assets.xcassets in Resources */,
 				D17D1A8725138AEE000A9BE5 /* businessStrategy.json in Resources */,
+				D1CA13252513A59100F4CA14 /* bloodDrop.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,6 +200,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1CA131E2513A15700F4CA14 /* Tabbar.swift in Sources */,
+				D1CA13222513A33100F4CA14 /* BlurView.swift in Sources */,
 				D1FDFD032513397000342C2F /* ContentView.swift in Sources */,
 				D1FDFD012513397000342C2F /* SwimmingCoachApp.swift in Sources */,
 				D170581F25137A55009C9714 /* Main.swift in Sources */,

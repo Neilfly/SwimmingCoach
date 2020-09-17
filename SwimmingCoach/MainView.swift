@@ -11,9 +11,10 @@ struct MainView: View {
     
     @Binding var showSettings: Bool
     @State var ModeCards = ModeCardArray
+    @State var HealthyCards = HealthyCardArray
     
     var body: some View {
-        VStack {
+        ScrollView {
             HStack {
                 Text("Welcome!")
                     .font(.system(size: 28, weight: .bold))
@@ -40,11 +41,25 @@ struct MainView: View {
                     
                 }
                 .padding(30)
-                .padding(.top, -10)
                 .padding(.bottom, 30)
             }
+            .offset(y: -20)
             
-            Spacer()
+            VStack {
+                HStack {
+                    Text("游泳知识")
+                        .font(.title).bold()
+                    Spacer()
+                }
+                .padding(.leading, 30)
+                .offset(y: -50)
+                
+                ForEach(HealthyCards.indices) { index in
+                    HealthCard(HealthyCards: $HealthyCards[index])
+                        .padding()
+                }
+            }
+            
         }
     }
 }
@@ -52,6 +67,7 @@ struct MainView: View {
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
         MainView(showSettings: .constant(false))
+            
     }
 }
 
@@ -92,6 +108,39 @@ struct ModeCardView: View {
     }
 }
 
+struct HealthCard: View {
+    
+    @Binding var HealthyCards: HealthyCard
+    
+    var body: some View {
+        HStack {
+            VStack(alignment: .leading) {
+                HStack(alignment: .top) {
+                    Text(HealthyCards.title)
+                        .font(.system(size: 28, weight: .bold))
+                        .frame(width: 160, alignment: .leading)
+                        .foregroundColor(.white)
+                    
+                    Spacer()
+                }
+                
+                Text(HealthyCards.subtitle)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .foregroundColor(.white)
+            }
+            
+            LottieView(filename: HealthyCards.lottie)
+                .frame(height: 200)
+        }
+        .padding(.horizontal, 20)
+        .frame(width: screen.width - 60, height: 300)
+        .background(HealthyCards.color)
+        .cornerRadius(30)
+        .shadow(color: HealthyCards.color.opacity(0.3), radius: 20, x: 0, y: 20)
+        .offset(y: -50)
+    }
+}
+
 struct ModeCard: Identifiable {
     var id = UUID()
     var icon: String
@@ -101,8 +150,21 @@ struct ModeCard: Identifiable {
     var lottie: String
 }
 
+struct HealthyCard: Identifiable {
+    var id = UUID()
+    var title: String
+    var subtitle: String
+    var lottie: String
+    var color: Color
+}
+
 let ModeCardArray = [
     ModeCard(icon: "易", title: "业余游泳\n模式", subtitle: "采用业余数据", color: "c1", lottie: "businessStrategy"),
     ModeCard(icon: "难", title: "专业游泳\n模式", subtitle: "采用专业数据", color: "c3", lottie: "businessTeam"),
     ModeCard(icon: "自", title: "自由游泳\n模式", subtitle: "不进行数据对比", color: "c2", lottie: "socialMedia")
+]
+
+let HealthyCardArray = [
+    HealthyCard(title: "游泳可以减少血栓出现的可能性", subtitle: "新科研成果", lottie: "blood", color: Color.black),
+    HealthyCard(title: "游泳对脑部供血供氧有帮助", subtitle: "临床实验结果", lottie: "brain", color: Color(#colorLiteral(red: 0.7963862419, green: 0.6522253156, blue: 0.471994698, alpha: 1)))
 ]
