@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D170581C25135376009C9714 /* Account&SignOutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D170581B25135376009C9714 /* Account&SignOutView.swift */; };
 		D1FDFD012513397000342C2F /* SwimmingCoachApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FDFD002513397000342C2F /* SwimmingCoachApp.swift */; };
 		D1FDFD032513397000342C2F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FDFD022513397000342C2F /* ContentView.swift */; };
 		D1FDFD052513397000342C2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1FDFD042513397000342C2F /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D170581B25135376009C9714 /* Account&SignOutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Account&SignOutView.swift"; sourceTree = "<group>"; };
 		D1FDFCFD2513397000342C2F /* SwimmingCoach.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwimmingCoach.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1FDFD002513397000342C2F /* SwimmingCoachApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwimmingCoachApp.swift; sourceTree = "<group>"; };
 		D1FDFD022513397000342C2F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -54,6 +56,7 @@
 			children = (
 				D1FDFD002513397000342C2F /* SwimmingCoachApp.swift */,
 				D1FDFD022513397000342C2F /* ContentView.swift */,
+				D170581B25135376009C9714 /* Account&SignOutView.swift */,
 				D1FDFD042513397000342C2F /* Assets.xcassets */,
 				D1FDFD092513397000342C2F /* Info.plist */,
 				D1FDFD062513397000342C2F /* Preview Content */,
@@ -140,6 +143,7 @@
 			files = (
 				D1FDFD032513397000342C2F /* ContentView.swift in Sources */,
 				D1FDFD012513397000342C2F /* SwimmingCoachApp.swift in Sources */,
+				D170581C25135376009C9714 /* Account&SignOutView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
