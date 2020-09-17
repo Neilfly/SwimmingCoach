@@ -28,10 +28,14 @@ struct MainView: View {
             
             //三种不同模式的选择卡片
             ScrollView(.horizontal, showsIndicators: false) {
-                HStack(spacing: 30.0) {
+                HStack(spacing: 20.0) {
 
                     ForEach(ModeCards.indices) { index in
-                        ModeCardView(ModeCards: $ModeCards[index])
+                        GeometryReader {  geometry in
+                            ModeCardView(ModeCards: $ModeCards[index])
+                                .rotation3DEffect(Angle(degrees: Double(geometry.frame(in: .global).minX - 30) / -20), axis: (x: 0, y: 10, z: 0))
+                        }
+                        .frame(width: 275, height: 275)
                     }
                     
                 }
