@@ -24,8 +24,10 @@ struct MainView: View {
             .padding(.horizontal)
             .padding(.top, 30)
             
+            //三种不同模式的选择卡片
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 30.0) {
+                    //业余模式
                     VStack {
                         HStack(alignment: .top) {
                             Text("业余游泳\n模式")
@@ -56,6 +58,7 @@ struct MainView: View {
                     .cornerRadius(30)
                     .shadow(color: Color("c1").opacity(0.3), radius: 20, x: 0, y: 20)
                     
+                    //专业模式
                     VStack {
                         HStack(alignment: .top) {
                             Text("专业游泳\n模式")
@@ -86,6 +89,7 @@ struct MainView: View {
                     .cornerRadius(30)
                     .shadow(color: Color("c3").opacity(0.3), radius: 20, x: 0, y: 20)
                     
+                    //自由模式
                     VStack {
                         HStack(alignment: .top) {
                             Text("自由游泳\n模式")
