@@ -40,6 +40,7 @@ struct MainView: View {
                     
                 }
                 .padding(30)
+                .padding(.top, -10)
                 .padding(.bottom, 30)
             }
             
