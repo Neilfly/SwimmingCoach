@@ -12,6 +12,7 @@ struct MainView: View {
     @Binding var showSettings: Bool
     @State var ModeCards = ModeCardArray
     @State var HealthyCards = HealthyCardArray
+    @State var show = false
     
     var body: some View {
         ScrollView {
@@ -54,8 +55,8 @@ struct MainView: View {
                 .padding(.leading, 30)
                 .offset(y: -50)
                 
-                ForEach(HealthyCards.indices) { index in
-                    HealthCard(HealthyCards: $HealthyCards[index])
+                ForEach(HealthyCards.indices, id: \.self) { index in
+                    HealthCard(HealthyCards: $HealthyCards[index], show: $HealthyCards[index].show)
                         .padding()
                 }
             }
@@ -111,33 +112,43 @@ struct ModeCardView: View {
 struct HealthCard: View {
     
     @Binding var HealthyCards: HealthyCard
+    @Binding var show: Bool
     
     var body: some View {
-        HStack {
-            VStack(alignment: .leading) {
-                HStack(alignment: .top) {
-                    Text(HealthyCards.title)
-                        .font(.system(size: 28, weight: .bold))
-                        .frame(width: 160, alignment: .leading)
-                        .foregroundColor(.white)
+        VStack {
+            HStack {
+                VStack(alignment: .leading) {
+                    HStack(alignment: .top) {
+                        Text(HealthyCards.title)
+                            .font(.system(size: 28, weight: .bold))
+                            .frame(width: 160, alignment: .leading)
+                            .foregroundColor(.white)
+                            
+                        
+                        Spacer()
+                    }
                     
-                    Spacer()
+                    Text(HealthyCards.subtitle)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .foregroundColor(.white)
+                        .font(.system(size: show ? 18 : 16))
                 }
                 
-                Text(HealthyCards.subtitle)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .foregroundColor(.white)
+                LottieView(filename: HealthyCards.lottie)
+                    .frame(height: 200)
             }
-            
-            LottieView(filename: HealthyCards.lottie)
-                .frame(height: 200)
+            .padding(.horizontal, 20)
+            .frame(maxWidth: show ? .infinity : screen.width - 60, maxHeight: show ? .infinity : 300)
+            .background(HealthyCards.color)
+            .hueRotation(Angle(degrees: show ? 0 : 60))
+            .cornerRadius(30)
+            .shadow(color: HealthyCards.color.opacity(0.3), radius: 20, x: 0, y: 20)
+            .offset(y: -50)
+            .onTapGesture {
+                self.show.toggle()
+            }
+            .animation(.spring(response: 0.5, dampingFraction: 0.6, blendDuration: 0))
         }
-        .padding(.horizontal, 20)
-        .frame(width: screen.width - 60, height: 300)
-        .background(HealthyCards.color)
-        .cornerRadius(30)
-        .shadow(color: HealthyCards.color.opacity(0.3), radius: 20, x: 0, y: 20)
-        .offset(y: -50)
     }
 }
 
@@ -156,6 +167,7 @@ struct HealthyCard: Identifiable {
     var subtitle: String
     var lottie: String
     var color: Color
+    var show: Bool
 }
 
 let ModeCardArray = [
@@ -165,6 +177,6 @@ let ModeCardArray = [
 ]
 
 let HealthyCardArray = [
-    HealthyCard(title: "游泳可以减少血栓出现的可能性", subtitle: "新科研成果", lottie: "blood", color: Color.black),
-    HealthyCard(title: "游泳对脑部供血供氧有帮助", subtitle: "临床实验结果", lottie: "brain", color: Color(#colorLiteral(red: 0.7963862419, green: 0.6522253156, blue: 0.471994698, alpha: 1)))
+    HealthyCard(title: "游泳可以减少血栓出现的可能性", subtitle: "新科研成果", lottie: "blood", color: Color.black, show: false),
+    HealthyCard(title: "游泳对脑部供血供氧有帮助", subtitle: "临床实验结果", lottie: "brain", color: Color(#colorLiteral(red: 0.7963862419, green: 0.6522253156, blue: 0.471994698, alpha: 1)), show: false)
 ]
