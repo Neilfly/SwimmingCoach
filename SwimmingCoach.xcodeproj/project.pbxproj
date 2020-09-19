@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D135D3DC251502710079A2EC /* ModelList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D135D3DB251502710079A2EC /* ModelList.swift */; };
+		D135D3E525164E5C0079A2EC /* ModelDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D135D3E425164E5C0079A2EC /* ModelDetail.swift */; };
 		D170581C25135376009C9714 /* AccountSignOutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D170581B25135376009C9714 /* AccountSignOutView.swift */; };
 		D170581F25137A55009C9714 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = D170581E25137A55009C9714 /* Main.swift */; };
 		D17D1A82251383EA000A9BE5 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17D1A81251383EA000A9BE5 /* MainView.swift */; };
@@ -28,6 +30,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D135D3DB251502710079A2EC /* ModelList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelList.swift; sourceTree = "<group>"; };
+		D135D3E425164E5C0079A2EC /* ModelDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelDetail.swift; sourceTree = "<group>"; };
 		D170581B25135376009C9714 /* AccountSignOutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSignOutView.swift; sourceTree = "<group>"; };
 		D170581E25137A55009C9714 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
 		D17D1A81251383EA000A9BE5 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -98,6 +102,8 @@
 				D1FDFD022513397000342C2F /* ContentView.swift */,
 				D170581E25137A55009C9714 /* Main.swift */,
 				D17D1A81251383EA000A9BE5 /* MainView.swift */,
+				D135D3DB251502710079A2EC /* ModelList.swift */,
+				D135D3E425164E5C0079A2EC /* ModelDetail.swift */,
 				D170581B25135376009C9714 /* AccountSignOutView.swift */,
 				D1CA131D2513A15700F4CA14 /* Tabbar.swift */,
 				D17D1A8D25138DB1000A9BE5 /* LottieView.swift */,
@@ -204,8 +210,10 @@
 				D1CA13222513A33100F4CA14 /* BlurView.swift in Sources */,
 				D1FDFD032513397000342C2F /* ContentView.swift in Sources */,
 				D1FDFD012513397000342C2F /* SwimmingCoachApp.swift in Sources */,
+				D135D3E525164E5C0079A2EC /* ModelDetail.swift in Sources */,
 				D170581F25137A55009C9714 /* Main.swift in Sources */,
 				D17D1A82251383EA000A9BE5 /* MainView.swift in Sources */,
+				D135D3DC251502710079A2EC /* ModelList.swift in Sources */,
 				D170581C25135376009C9714 /* AccountSignOutView.swift in Sources */,
 				D17D1A8E25138DB1000A9BE5 /* LottieView.swift in Sources */,
 			);

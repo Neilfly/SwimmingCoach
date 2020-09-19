@@ -16,7 +16,10 @@ struct Tabbar: View {
                 }
             
             //格式一样另外一页
-            
+            ModelList().tabItem {
+                Image(systemName: "timer")
+                Text("历史")
+            }
         }
         .edgesIgnoringSafeArea(.top)
     }
