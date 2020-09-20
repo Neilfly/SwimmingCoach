@@ -115,22 +115,42 @@ struct ModelCardsView: View {
                     }
                     Spacer()
                     ZStack {
-                        Text(card.icon)
-                            .font(.system(size: 18, weight: .bold))
-                            .padding(6)
-                            .foregroundColor(Color(#colorLiteral(red: 0.368627451, green: 0.8, blue: 0.9725490196, alpha: 1)))
-                            .background(Color(#colorLiteral(red: 0.09803921569, green: 0.1215686275, blue: 0.2901960784, alpha: 1)))
-                            .clipShape(Circle())
-                        
-                        VStack {
-                            Image(systemName: "xmark")
-                                .font(.system(size: 16, weight: .medium))
+                        VStack(alignment: .trailing) {
+                            Text(show ? "X" : card.icon)
+                                .font(.system(size: show ? 28 : 18, weight: .bold))
+                                .padding(6)
+                                .foregroundColor(show ? Color(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)) : Color(#colorLiteral(red: 0.368627451, green: 0.8, blue: 0.9725490196, alpha: 1)))
+                                .background(Color(#colorLiteral(red: 0.09803921569, green: 0.1215686275, blue: 0.2901960784, alpha: 1)))
+                                .clipShape(Circle())
+                                .animation(.easeOut)
+                            
+                            VStack(alignment: .trailing, spacing: 5.0) {
+                                Text(card.date)
+                                    .italic()
+                                    .foregroundColor(.white)
+                                
+                                HStack {
+                                    Text(String(card.time))
+                                        .fontWeight(.bold)
+                                    
+                                    Text("分钟")
+                                        .font(.system(size: 14))
+                                }
                                 .foregroundColor(.white)
+                            }
+                            .padding(.top, 10.0)
+                            
                         }
-                        .frame(width: 36, height: 36)
-                        .background(Color.black)
-                        .clipShape(Circle())
-                        .opacity(show ? 1 : 0)
+                        
+//                        VStack {
+//                            Image(systemName: "xmark")
+//                                .font(.system(size: 16, weight: .medium))
+//                                .foregroundColor(.white)
+//                        }
+//                        .frame(width: 36, height: 36)
+//                        .background(Color.black)
+//                        .clipShape(Circle())
+//                        .opacity(show ? 1 : 0)
                         
                     }
                 }
@@ -220,11 +240,13 @@ struct Card: Identifiable {
     var title: String
     var subtitle: String
     var color: String
+    var date: String
+    var time: Int
     var show: Bool
 }
 
 let CardArray = [
-    Card(icon: "易", title: "业余游泳\n模式", subtitle: "采用业余数据", color: "c1", show: false),
-    Card(icon: "难", title: "专业游泳\n模式", subtitle: "采用专业数据", color: "c3", show: false),
-    Card(icon: "自", title: "自由游泳\n模式", subtitle: "不进行数据对比", color: "c2", show: false)
+    Card(icon: "易", title: "业余游泳\n模式", subtitle: "采用业余数据", color: "c1", date: "8.18, 2020", time: 90, show: false),
+    Card(icon: "难", title: "专业游泳\n模式", subtitle: "采用专业数据", color: "c3", date: "8.20, 2020", time: 40, show: false),
+    Card(icon: "自", title: "自由游泳\n模式", subtitle: "不进行数据对比", color: "c2", date: "9.10, 2020", time: 80, show: false)
 ]
