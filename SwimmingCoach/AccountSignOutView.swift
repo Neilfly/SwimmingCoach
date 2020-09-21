@@ -55,7 +55,7 @@ struct AccountSignOutView: View {
 struct AccountSignOutView_Previews: PreviewProvider {
     static var previews: some View {
         AccountSignOutView()
-            .environment(\.colorScheme, .dark)
+//            .environment(\.colorScheme, .dark)
     }
 }
 

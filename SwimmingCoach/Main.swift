@@ -63,7 +63,7 @@ struct Main: View {
 struct Main_Previews: PreviewProvider {
     static var previews: some View {
         Main()
-            .environment(\.colorScheme, .dark)
+//            .environment(\.colorScheme, .dark)
     }
 }
 

@@ -28,6 +28,6 @@ struct Tabbar: View {
 struct Tabbar_Previews: PreviewProvider {
     static var previews: some View {
         Tabbar()
-            .environment(\.colorScheme, .dark)
+//            .environment(\.colorScheme, .dark)
     }
 }
