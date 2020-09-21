@@ -34,7 +34,7 @@ struct AccountSignOutView: View {
             .frame(maxWidth: .infinity)
             .frame(height: 300)
             .background(
-                LinearGradient(gradient: Gradient(colors: [Color.white, Color(#colorLiteral(red: 0.8705882353, green: 0.8941176471, blue: 0.9450980392, alpha: 1))]), startPoint: .top, endPoint: .bottom)
+                BlurView(style: .systemMaterial)
             )
             .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
             .shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 20)
@@ -55,6 +55,7 @@ struct AccountSignOutView: View {
 struct AccountSignOutView_Previews: PreviewProvider {
     static var previews: some View {
         AccountSignOutView()
+            .environment(\.colorScheme, .dark)
     }
 }
 

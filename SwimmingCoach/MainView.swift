@@ -68,6 +68,7 @@ struct MainView: View {
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
         MainView(showSettings: .constant(false))
+            .environment(\.colorScheme, .dark)
             
     }
 }
@@ -177,6 +178,6 @@ let ModeCardArray = [
 ]
 
 let HealthyCardArray = [
-    HealthyCard(title: "游泳可以减少血栓出现的可能性", subtitle: "新科研成果", lottie: "blood", color: Color.black, show: false),
+    HealthyCard(title: "游泳可以减少血栓出现的可能性", subtitle: "新科研成果", lottie: "blood", color: Color(#colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)), show: false),
     HealthyCard(title: "游泳对脑部供血供氧有帮助", subtitle: "临床实验结果", lottie: "brain", color: Color(#colorLiteral(red: 0.7963862419, green: 0.6522253156, blue: 0.471994698, alpha: 1)), show: false)
 ]

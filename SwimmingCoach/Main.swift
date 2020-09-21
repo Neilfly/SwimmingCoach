@@ -14,11 +14,20 @@ struct Main: View {
     
     var body: some View {
         ZStack {
-            Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)).edgesIgnoringSafeArea(.all)
+            Color("bg2").edgesIgnoringSafeArea(.all)
             
             MainView(showSettings: $showSettings)
                 .padding(.top, 44)
-                .background(Color.white)
+                .background(
+                    VStack {
+                        LinearGradient(gradient: Gradient(colors: [Color("bg2"), Color("bg1")]), startPoint: .top, endPoint: .bottom)
+                            .frame(height: 200)
+                        
+                        Spacer()
+                    }
+                    .background(Color("bg1"))
+                )
+//                .foregroundColor(Color("bg1"))
                 .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
                 .shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 20)
                 .offset(y: showSettings ? -450 : 0)
@@ -54,6 +63,7 @@ struct Main: View {
 struct Main_Previews: PreviewProvider {
     static var previews: some View {
         Main()
+            .environment(\.colorScheme, .dark)
     }
 }
 
@@ -71,6 +81,7 @@ struct HeadView: View {
                 .aspectRatio(contentMode: .fill)
                 .frame(width: 36, height: 36)
                 .clipShape(Circle())
+//                .background(Color("bg3"))
         }
     }
 }
