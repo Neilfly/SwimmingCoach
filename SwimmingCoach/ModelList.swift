@@ -120,7 +120,7 @@ struct ModelCardsView: View {
                                 .font(.system(size: show ? 28 : 18, weight: .bold))
                                 .padding(6)
                                 .foregroundColor(show ? Color(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)) : Color(#colorLiteral(red: 0.368627451, green: 0.8, blue: 0.9725490196, alpha: 1)))
-                                .background(Color(#colorLiteral(red: 0.09803921569, green: 0.1215686275, blue: 0.2901960784, alpha: 1)))
+                                .background(show ? Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)) : Color(#colorLiteral(red: 0.09803921569, green: 0.1215686275, blue: 0.2901960784, alpha: 1)))
                                 .clipShape(Circle())
                                 .animation(.easeOut)
                             
@@ -169,27 +169,27 @@ struct ModelCardsView: View {
             .background(Color(card.color))
             .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
             .shadow(color: Color(card.color).opacity(0.3), radius: 20, x: 0, y: 20)
-            .gesture(
-                show ?
-                DragGesture().onChanged{ value in
-                    guard value.translation.height < 300 else {
-                        return
-                    }
-                    guard value.translation.height > 0 else { return }
-                        
-                        self.activeView = value.translation
-                    
-                }
-                .onEnded{ value in
-                    if self.activeView.height > 50 {
-                        self.show = false
-                        self.active = false
-                        self.activeIndex = -1
-                    }
-                    self.activeView = .zero
-                }
-                : nil
-            )
+//            .gesture(
+//                show ?
+//                DragGesture().onChanged{ value in
+//                    guard value.translation.height < 300 else {
+//                        return
+//                    }
+//                    guard value.translation.height > 0 else { return }
+//
+//                        self.activeView = value.translation
+//
+//                }
+//                .onEnded{ value in
+//                    if self.activeView.height > 50 {
+//                        self.show = false
+//                        self.active = false
+//                        self.activeIndex = -1
+//                    }
+//                    self.activeView = .zero
+//                }
+//                : nil
+//            )
             .onTapGesture {
                 self.show.toggle()
                 self.active.toggle()
@@ -200,36 +200,36 @@ struct ModelCardsView: View {
                 }
             }
             
-//            if show {
+            if show {
 //                ModelDetail(card: card, show: $show, active: $active, activeIndex: $activeIndex)
 //                    .background(Color.white)
 //                    .animation(nil)
-//            }
+            }
         }
         .frame(height: show ? screen.height : 280)
         .scaleEffect(1 - self.activeView.height / 1500)
-        .rotation3DEffect(Angle(degrees: Double(self.activeView.height / 10)), axis: (x: 0, y: 10, z: 0))
-        .hueRotation(Angle(degrees: Double(self.activeView.height)))
+//        .rotation3DEffect(Angle(degrees: Double(self.activeView.height / 10)), axis: (x: 0, y: 10, z: 0))
+//        .hueRotation(Angle(degrees: Double(self.activeView.height)))
         .animation(.spring(response: 0.5, dampingFraction: 0.6, blendDuration: 0))
-        .gesture(
-            show ?
-            DragGesture().onChanged{ value in
-                guard value.translation.height < 300 else {return}
-                guard value.translation.height > 0 else { return }
-                    
-                    self.activeView = value.translation
-                
-            }
-            .onEnded{ value in
-                if self.activeView.height > 50 {
-                    self.show = false
-                    self.active = false
-                    self.activeIndex = -1
-                }
-                self.activeView = .zero
-            }
-            : nil
-        )
+//        .gesture(
+//            show ?
+//            DragGesture().onChanged{ value in
+//                guard value.translation.height < 300 else {return}
+//                guard value.translation.height > 0 else { return }
+//
+//                    self.activeView = value.translation
+//
+//            }
+//            .onEnded{ value in
+//                if self.activeView.height > 50 {
+//                    self.show = false
+//                    self.active = false
+//                    self.activeIndex = -1
+//                }
+//                self.activeView = .zero
+//            }
+//            : nil
+//        )
         .edgesIgnoringSafeArea(.all)
     }
 }
