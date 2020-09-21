@@ -16,51 +16,54 @@ struct MainView: View {
     
     var body: some View {
         ScrollView {
-            HStack {
-                Text("Welcome!")
-                    .font(.system(size: 28, weight: .bold))
-                
-                Spacer()
-                
-                HeadView(showSettings: $showSettings)
-            }
-            .padding(.horizontal)
-            .padding(.leading, 14)
-            .padding(.top, 30)
-            
-            //三种不同模式的选择卡片
-            ScrollView(.horizontal, showsIndicators: false) {
-                HStack(spacing: 20.0) {
-
-                    ForEach(ModeCards.indices) { index in
-                        GeometryReader {  geometry in
-                            ModeCardView(ModeCards: $ModeCards[index])
-                                .rotation3DEffect(Angle(degrees: Double(geometry.frame(in: .global).minX - 30) / -20), axis: (x: 0, y: 10, z: 0))
-                        }
-                        .frame(width: 275, height: 275)
-                    }
-                    
-                }
-                .padding(30)
-                .padding(.bottom, 30)
-            }
-            .offset(y: -20)
-            
             VStack {
                 HStack {
-                    Text("游泳知识")
-                        .font(.title).bold()
+                    Text("Welcome!")
+                        .font(.system(size: 28, weight: .bold))
+                    
                     Spacer()
+                    
+                    HeadView(showSettings: $showSettings)
                 }
-                .padding(.leading, 30)
-                .offset(y: -50)
+                .padding(.horizontal)
+                .padding(.leading, 14)
+                .padding(.top, 30)
                 
-                ForEach(HealthyCards.indices, id: \.self) { index in
-                    HealthCard(HealthyCards: $HealthyCards[index], show: $HealthyCards[index].show)
-                        .padding()
+                //三种不同模式的选择卡片
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack(spacing: 20.0) {
+
+                        ForEach(ModeCards.indices) { index in
+                            GeometryReader {  geometry in
+                                ModeCardView(ModeCards: $ModeCards[index])
+                                    .rotation3DEffect(Angle(degrees: Double(geometry.frame(in: .global).minX - 30) / -20), axis: (x: 0, y: 10, z: 0))
+                            }
+                            .frame(width: 275, height: 275)
+                        }
+                        
+                    }
+                    .padding(30)
+                    .padding(.bottom, 30)
                 }
+                .offset(y: -20)
+                
+                VStack {
+                    HStack {
+                        Text("游泳知识")
+                            .font(.title).bold()
+                        Spacer()
+                    }
+                    .padding(.leading, 30)
+                    .offset(y: -50)
+                    
+                    ForEach(HealthyCards.indices, id: \.self) { index in
+                        HealthCard(HealthyCards: $HealthyCards[index], show: $HealthyCards[index].show)
+                            .padding()
+                    }
+                }
+                
             }
-            
+            .frame(width: screen.width)
         }
     }
 }
