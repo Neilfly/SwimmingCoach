@@ -31,7 +31,7 @@ struct AccountSignOutView: View {
                 SettingRow(title: "修改信息", icon: "gearshape")
                 SettingRow(title: "退出登陆", icon: "person.crop.circle")
             }
-            .frame(maxWidth: .infinity)
+            .frame(maxWidth: 500)
             .frame(height: 300)
             .background(
                 BlurView(style: .systemMaterial)

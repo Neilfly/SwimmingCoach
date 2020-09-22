@@ -12,10 +12,11 @@ struct ModelDetail: View {
     @Binding var show: Bool
     @Binding var active: Bool
     @Binding var activeIndex: Int
+    @Binding var isScrollable: Bool
     
     var body: some View {
         ScrollView {
-            VStack {
+            VStack(spacing: 0.0) {
                 VStack {
                     HStack(alignment: .top) {
                         VStack(alignment: .leading, spacing: 8.0) {
@@ -42,6 +43,7 @@ struct ModelDetail: View {
                                 self.show = false
                                 self.active = false
                                 self.activeIndex = -1
+                                self.isScrollable = false
                             }
                             
                         }
@@ -57,7 +59,7 @@ struct ModelDetail: View {
                 }
                 .padding(show ? 30 : 20)
                 .padding(.top, show ? 30 : 0)
-                .frame(maxWidth: show ? .infinity : screen.width - 60, maxHeight: show ? 400 : 280)
+                .frame(maxWidth: show ? .infinity : screen.width - 60, maxHeight: show ? 460 : 280)
                 .background(Color(card.color))
                 .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
                 .shadow(color: Color(card.color).opacity(0.3), radius: 20, x: 0, y: 20)
@@ -84,6 +86,6 @@ struct ModelDetail: View {
 
 struct ModelDetail_Previews: PreviewProvider {
     static var previews: some View {
-        ModelDetail(card: CardArray[0], show: .constant(true), active: .constant(true), activeIndex: .constant(-1))
+        ModelDetail(card: CardArray[0], show: .constant(true), active: .constant(true), activeIndex: .constant(-1), isScrollable: .constant(false))
     }
 }

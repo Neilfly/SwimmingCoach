@@ -13,6 +13,7 @@ struct ModelList: View {
     @State var active = false
     @State var activeIndex =  -1
     @State var activeView = CGSize.zero
+    @Environment(\.horizontalSizeClass) var horizontalSizeClass
     
     var body: some View {
         ZStack {
@@ -70,6 +71,7 @@ struct ModelList_Previews: PreviewProvider {
 }
 
 struct ModelCardsView: View {
+    @State var isScrollable = false
     @Binding var show: Bool
     @Binding var active: Bool
     @Binding var activeIndex: Int
@@ -95,7 +97,7 @@ struct ModelCardsView: View {
             .padding(30)
             .frame(maxWidth: show ? .infinity : screen.width - 60, maxHeight: show ? .infinity : 280, alignment: .top)
             .offset(y: show ? 400 : 0)
-            .background(Color("bg2"))
+            .background(Color("bg1"))
             .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
             .shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 20)
             .opacity(show ? 1 : 0)
@@ -198,13 +200,17 @@ struct ModelCardsView: View {
                 } else {
                     self.activeIndex = -1
                 }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.7) {
+                    self.isScrollable = true
+                }
             }
             
-            if show {
-//                ModelDetail(card: card, show: $show, active: $active, activeIndex: $activeIndex)
+//            if isScrollable {
+//                ModelDetail(card: card, show: $show, active: $active, activeIndex: $activeIndex, isScrollable: $isScrollable)
 //                    .background(Color.white)
 //                    .animation(nil)
-            }
+//                    .transition(.identity)
+//            }
         }
         .frame(height: show ? screen.height : 280)
         .scaleEffect(1 - self.activeView.height / 1500)
