@@ -117,7 +117,7 @@ struct ModeCardView: View {
             Text(ModeCards.subtitle)
                 .frame(maxWidth: .infinity, alignment: .leading)
             
-            LottieView(filename: ModeCards.lottie)
+            LottieView(filename: ModeCards.lottie, loopMode: .autoReverse)
                 .frame(width: 210)
         }
         .padding(.top, 20)
@@ -154,7 +154,7 @@ struct HealthCard: View {
                         .font(.system(size: show ? 18 : 16))
                 }
                 
-                LottieView(filename: HealthyCards.lottie)
+                LottieView(filename: HealthyCards.lottie, loopMode: .autoReverse)
                     .frame(height: 200)
             }
             

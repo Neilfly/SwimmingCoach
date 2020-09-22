@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		D1132A5B2519C6AB00287E02 /* rationFood.json in Resources */ = {isa = PBXBuildFile; fileRef = D1132A5A2519C6AB00287E02 /* rationFood.json */; };
+		D1132A602519CD0F00287E02 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1132A5F2519CD0E00287E02 /* LoginView.swift */; };
+		D1132A632519D34200287E02 /* puzzleAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = D1132A622519D34200287E02 /* puzzleAnimation.json */; };
+		D1132A662519D3FD00287E02 /* helloLove.json in Resources */ = {isa = PBXBuildFile; fileRef = D1132A652519D3FD00287E02 /* helloLove.json */; };
+		D1132A692519D42F00287E02 /* das.json in Resources */ = {isa = PBXBuildFile; fileRef = D1132A682519D42E00287E02 /* das.json */; };
 		D135D3DC251502710079A2EC /* ModelList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D135D3DB251502710079A2EC /* ModelList.swift */; };
 		D135D3E525164E5C0079A2EC /* ModelDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D135D3E425164E5C0079A2EC /* ModelDetail.swift */; };
 		D170581C25135376009C9714 /* AccountSignOutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D170581B25135376009C9714 /* AccountSignOutView.swift */; };
@@ -18,6 +22,8 @@
 		D17D1A8E25138DB1000A9BE5 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17D1A8D25138DB1000A9BE5 /* LottieView.swift */; };
 		D17D1A9125139217000A9BE5 /* businessTeam.json in Resources */ = {isa = PBXBuildFile; fileRef = D17D1A9025139217000A9BE5 /* businessTeam.json */; };
 		D17D1A942513934F000A9BE5 /* socialMedia.json in Resources */ = {isa = PBXBuildFile; fileRef = D17D1A932513934F000A9BE5 /* socialMedia.json */; };
+		D1B555FF2519D53C00C0792C /* finishig.json in Resources */ = {isa = PBXBuildFile; fileRef = D1B555FE2519D53C00C0792C /* finishig.json */; };
+		D1B556022519D66E00C0792C /* likes.json in Resources */ = {isa = PBXBuildFile; fileRef = D1B556012519D66E00C0792C /* likes.json */; };
 		D1CA13222513A33100F4CA14 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CA13212513A33100F4CA14 /* BlurView.swift */; };
 		D1CA13252513A59100F4CA14 /* bloodDrop.json in Resources */ = {isa = PBXBuildFile; fileRef = D1CA13242513A59100F4CA14 /* bloodDrop.json */; };
 		D1CA13282513A74700F4CA14 /* blood.json in Resources */ = {isa = PBXBuildFile; fileRef = D1CA13272513A74700F4CA14 /* blood.json */; };
@@ -31,6 +37,10 @@
 
 /* Begin PBXFileReference section */
 		D1132A5A2519C6AB00287E02 /* rationFood.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = rationFood.json; sourceTree = "<group>"; };
+		D1132A5F2519CD0E00287E02 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		D1132A622519D34200287E02 /* puzzleAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = puzzleAnimation.json; sourceTree = "<group>"; };
+		D1132A652519D3FD00287E02 /* helloLove.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = helloLove.json; sourceTree = "<group>"; };
+		D1132A682519D42E00287E02 /* das.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = das.json; sourceTree = "<group>"; };
 		D135D3DB251502710079A2EC /* ModelList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelList.swift; sourceTree = "<group>"; };
 		D135D3E425164E5C0079A2EC /* ModelDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelDetail.swift; sourceTree = "<group>"; };
 		D170581B25135376009C9714 /* AccountSignOutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSignOutView.swift; sourceTree = "<group>"; };
@@ -40,6 +50,8 @@
 		D17D1A8D25138DB1000A9BE5 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		D17D1A9025139217000A9BE5 /* businessTeam.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = businessTeam.json; sourceTree = "<group>"; };
 		D17D1A932513934F000A9BE5 /* socialMedia.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = socialMedia.json; sourceTree = "<group>"; };
+		D1B555FE2519D53C00C0792C /* finishig.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = finishig.json; sourceTree = "<group>"; };
+		D1B556012519D66E00C0792C /* likes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = likes.json; sourceTree = "<group>"; };
 		D1CA13212513A33100F4CA14 /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		D1CA13242513A59100F4CA14 /* bloodDrop.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = bloodDrop.json; sourceTree = "<group>"; };
 		D1CA13272513A74700F4CA14 /* blood.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = blood.json; sourceTree = "<group>"; };
@@ -68,14 +80,19 @@
 		D17D1A8525138AEE000A9BE5 /* Lottie */ = {
 			isa = PBXGroup;
 			children = (
+				D1132A652519D3FD00287E02 /* helloLove.json */,
+				D1132A622519D34200287E02 /* puzzleAnimation.json */,
 				D17D1A9025139217000A9BE5 /* businessTeam.json */,
 				D17D1A8625138AEE000A9BE5 /* businessStrategy.json */,
 				D17D1A932513934F000A9BE5 /* socialMedia.json */,
 				D1CA13242513A59100F4CA14 /* bloodDrop.json */,
 				D1CA13272513A74700F4CA14 /* blood.json */,
+				D1B556012519D66E00C0792C /* likes.json */,
 				D1CA132A2513A7CD00F4CA14 /* medicalPulse.json */,
+				D1B555FE2519D53C00C0792C /* finishig.json */,
 				D1CA132D2513ADDD00F4CA14 /* brain.json */,
 				D1132A5A2519C6AB00287E02 /* rationFood.json */,
+				D1132A682519D42E00287E02 /* das.json */,
 			);
 			path = Lottie;
 			sourceTree = "<group>";
@@ -103,6 +120,7 @@
 				D1FDFD022513397000342C2F /* ContentView.swift */,
 				D170581E25137A55009C9714 /* Main.swift */,
 				D17D1A81251383EA000A9BE5 /* MainView.swift */,
+				D1132A5F2519CD0E00287E02 /* LoginView.swift */,
 				D135D3DB251502710079A2EC /* ModelList.swift */,
 				D135D3E425164E5C0079A2EC /* ModelDetail.swift */,
 				D170581B25135376009C9714 /* AccountSignOutView.swift */,
@@ -187,15 +205,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1B556022519D66E00C0792C /* likes.json in Resources */,
 				D17D1A9125139217000A9BE5 /* businessTeam.json in Resources */,
 				D1CA132B2513A7CD00F4CA14 /* medicalPulse.json in Resources */,
+				D1132A632519D34200287E02 /* puzzleAnimation.json in Resources */,
 				D1CA13282513A74700F4CA14 /* blood.json in Resources */,
+				D1132A662519D3FD00287E02 /* helloLove.json in Resources */,
 				D1CA132E2513ADDE00F4CA14 /* brain.json in Resources */,
+				D1132A692519D42F00287E02 /* das.json in Resources */,
 				D17D1A942513934F000A9BE5 /* socialMedia.json in Resources */,
 				D1FDFD082513397000342C2F /* Preview Assets.xcassets in Resources */,
 				D1132A5B2519C6AB00287E02 /* rationFood.json in Resources */,
 				D1FDFD052513397000342C2F /* Assets.xcassets in Resources */,
 				D17D1A8725138AEE000A9BE5 /* businessStrategy.json in Resources */,
+				D1B555FF2519D53C00C0792C /* finishig.json in Resources */,
 				D1CA13252513A59100F4CA14 /* bloodDrop.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -215,6 +238,7 @@
 				D17D1A82251383EA000A9BE5 /* MainView.swift in Sources */,
 				D135D3DC251502710079A2EC /* ModelList.swift in Sources */,
 				D170581C25135376009C9714 /* AccountSignOutView.swift in Sources */,
+				D1132A602519CD0F00287E02 /* LoginView.swift in Sources */,
 				D17D1A8E25138DB1000A9BE5 /* LottieView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
